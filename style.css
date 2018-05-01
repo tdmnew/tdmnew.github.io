@@ -1,0 +1,62 @@
+/*elements can be selected (Such as a div) via #id*
+
+classes can be selected with .center {}
+
+Specific class elements can be selected with p.center{}*/
+
+body {
+  background-color: gray;
+}
+
+h1 {
+  letter-spacing: -3px;
+  text-shadow: 3px 2px white;
+}
+
+#page-header{
+  color: black;
+}
+
+/*Width, padding and border equals 350px (width 320px padding 20px, border 10px)*/
+#main-page{
+  width: 620px;
+  padding: 10px;
+  border: 5px solid gray;
+}
+
+#banner{
+  background-color: lightblue;
+  margin: 0px;
+}
+
+#navbar {
+  height: 35px;
+
+}
+
+ul{
+  overflow: hidden;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  padding: 8px 5px 3px 5px;
+  margin-right: 5px;
+  background-color: lightblue;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  padding-top: 12px;
+  background-color: white;
+  text-decoration: none;
+}
