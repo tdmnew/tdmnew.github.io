@@ -5,36 +5,37 @@ classes can be selected with .center {}
 Specific class elements can be selected with p.center{}*/
 
 body {
-  background-color: #ae8799;
+    /* The image used */
+  background-image: url("coffee.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
+  font-family: helvetica;
   letter-spacing: -3px;
-  text-shadow: 3px 2px #ae8799;
+  text-shadow: 3px 2px #c6ac8f;
 }
 
-#page-header{
-  color: black;
-}
-
-/*Width, padding and border equals 350px (width 320px padding 20px, border 10px)*/
-#main-page{
-  width: 620px;
-  padding: 10px;
-  border: 5px;
-}
-
-#banner{
-  background-color: #c95d63;
-  margin: 0px;
-}
-
-#navbar {
+#nav {
   height: 35px;
+}
+
+#content-header {
+  font-family: helvetica;
+  font-size: 20px;
+  text-align: center;
 
 }
 
 ul{
+  font-family: helvetica;
   overflow: hidden;
   position: absolute;
   list-style: none;
@@ -45,16 +46,7 @@ ul{
 li {
   float: left;
   padding: 8px 15px 3px 15px;
-  background-color: #c95d63;
-}
-#about {
-  border-radius: 0px 0px 0px 10px;
-}
-#blog {
-  border-radius: 0px
-}
-#projects {
-  border-radius: 0px 0px 10px 0px;
+  background-color: #eae0d5;
 }
 
 a {
@@ -72,4 +64,63 @@ li:hover {
   padding-top: 12px;
   background-color: #496ddb;
   text-decoration: none;
+}
+
+#about {
+  border-radius: 0px 0px 0px 5px;
+}
+#blog {
+  border-radius: 0px
+}
+#projects {
+  border-radius: 0px 0px 5px 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 40px 1fr;
+  grid-template-areas:
+  "header header"
+  "navbar navbar"
+  "content content"
+}
+
+.header {
+  grid-area: header;
+  background-color: #eae0d5;
+  text-align: center;
+  border-radius: 2px 2px 2px 0px;
+}
+
+.navbar {
+  grid-area: navbar;
+  height: 40px;
+}
+
+.content {
+  grid-area: content;
+  background-color: #eae0d5;
+  border-radius: 2px
+}
+
+.nav-index {
+  height: 400px;
+  width: 250px;
+  color: lightblue
+}
+
+/* for standard desktop webpage */
+@media screen and (min-width: 746px)
+{
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 160px 40px 340px;
+    grid-template-areas:
+    ". header header header ."
+    ". navbar navbar navbar ."
+    ". content content content .";
+    /* ^^^  */
+  }
 }

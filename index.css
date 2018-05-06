@@ -1,0 +1,99 @@
+body {
+    /* The image used */
+  background-image: url("coffee.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: helvetica;
+  letter-spacing: -3px;
+  text-shadow: 3px 2px #c6ac8f;
+}
+
+h2 {
+  font-family: helvetica;
+  font-size: 10px
+}
+
+#nav {
+  height: 35px;
+}
+
+#content-header {
+  font-family: helvetica;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  grid-template-areas:
+  "header header"
+  "about about"
+  "blog blog"
+  "projects projects"
+}
+
+.header {
+  grid-area: header;
+  background-color: #eae0d5;
+  text-align: center;
+  border-radius: 2px 2px 2px 0px;
+}
+
+  .about, .blog, .projects {
+    background-size: cover;
+  }
+
+.about {
+  grid-area: about;
+  background-image: url("about.jpg");
+}
+.blog {
+  grid-area: blog;
+  background-image: url("blog.jpeg");
+}
+.projects {
+  grid-area: projects;
+  background-image: url("projects.jpg");
+}
+
+/* for standard desktop webpage */
+@media screen and (min-width: 746px)
+{
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 160px 20px 340px;
+    grid-template-areas:
+    ". header header header ."
+    ". . . . ."
+    ". about blog projects .";
+    /* ^^^  */
+  }
+
+  .about, .blog, .projects {
+    opacity: 0.5;
+    border-radius: 2px;
+    /* For Jquery Animation */
+    height: 20px;
+    width: 0px;
+  }
+
+  .about:hover, .blog:hover, .projects:hover {
+    opacity: 1;
+    text-shadow: 3px 2px #c6ac8f;
+  }
+}
