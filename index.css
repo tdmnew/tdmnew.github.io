@@ -12,18 +12,19 @@ body {
 }
 
 h1 {
+  font-size: 3em;
   font-family: helvetica;
   letter-spacing: -3px;
   text-shadow: 3px 2px #c6ac8f;
 }
 
+#headerText {
+  color: white;
+}
+
 h2 {
   font-family: helvetica;
   font-size: 10px
-}
-
-#nav {
-  height: 35px;
 }
 
 #content-header {
@@ -36,64 +37,116 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-row-gap: 5px;
   grid-column-gap: 5px;
   grid-template-areas:
   "header header"
-  "about about"
-  "blog blog"
-  "projects projects"
+  "content content";
 }
 
 .header {
   grid-area: header;
-  background-color: #eae0d5;
   text-align: center;
-  border-radius: 2px 2px 2px 0px;
+  border-radius: 2px;
 }
 
-  .about, .blog, .projects {
+.navItem {
     background-size: cover;
   }
 
-.about {
-  grid-area: about;
+#about {
   background-image: url("about.jpg");
 }
-.blog {
-  grid-area: blog;
+#blog {
   background-image: url("blog.jpeg");
 }
-.projects {
-  grid-area: projects;
+#projects {
   background-image: url("projects.jpg");
 }
+
+.content {
+  flex-direction: column;
+  grid-area: content;
+  display: flex;
+}
+
+.navItem {
+  border-radius: 2px;
+  padding: 20px 30px;
+  margin: auto;
+  width: 90%;
+}
+
+
+/* Top Nav */
+.navTop {
+  grid-area: navTop;
+  height: 40px;
+}
+
+ul{
+  font-family: helvetica;
+  overflow: hidden;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  padding: 8px 15px 3px 15px;
+  background-color: #eae0d5;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  padding-top: 12px;
+  text-decoration: none;
+}
+
+li:hover {
+  padding-top: 12px;
+  background-color: #496ddb;
+  text-decoration: none;
+}
+
+
+
 
 /* for standard desktop webpage */
 @media screen and (min-width: 746px)
 {
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 160px 20px 340px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 160px 20px 380px;
     grid-template-areas:
     ". header header header ."
-    ". . . . ."
-    ". about blog projects .";
-    /* ^^^  */
+    ". navTop navTop navTop ."
+    ". content content content .";
   }
 
-  .about, .blog, .projects {
+  .navItem {
     opacity: 0.5;
-    border-radius: 2px;
     /* For Jquery Animation */
-    height: 20px;
-    width: 0px;
+    height: 10px;
+    width: 25%;
   }
 
-  .about:hover, .blog:hover, .projects:hover {
+  #about:hover, #blog:hover, #projects:hover {
     opacity: 1;
     text-shadow: 3px 2px #c6ac8f;
+  }
+
+  .content {
+    flex-direction: row;
+    display: flex;
   }
 }
