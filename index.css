@@ -53,13 +53,14 @@ h2 {
 
 .navItem {
     background-size: cover;
+    background-color:white;
   }
 
 #about {
   background-image: url("about.jpg");
 }
 #blog {
-  background-image: url("blog.jpeg");
+  background-image: url("blog.jpg");
 }
 #projects {
   background-image: url("projects.jpg");
