@@ -77,13 +77,13 @@ h2 {
   padding: 20px 30px;
   margin: auto;
   width: 90%;
+  cursor: pointer;
 }
 
 
 /* Top Nav */
 .navTop {
   grid-area: navTop;
-  height: 40px;
 }
 
 ul{
@@ -99,6 +99,8 @@ li {
   float: left;
   padding: 8px 15px 3px 15px;
   background-color: #eae0d5;
+  height: 35px;
+  cursor: pointer;
 }
 
 a {
@@ -127,7 +129,7 @@ li:hover {
   .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 160px 20px 380px;
+    grid-template-rows: 160px 40px 380px;
     grid-template-areas:
     ". header header header ."
     ". navTop navTop navTop ."

@@ -1,5 +1,5 @@
 $(".header").hide(0)
-$(".navTop").hide(0);
+$("#topAbout, #topBlog, #topProjects").hide(0);
 
 var navItems = $("#about, #blog, #projects");
 var firstAnimationPlayed = false; //determines whether .navTop should be displayed
@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     // Use animation if using desktop
     if (size >= 746){
-      navItems.animate({height: "75%"}, "slow", function(){
+      navItems.animate({height: "340px"}, "slow", function(){
         $(".navText").animate({fontSize: "2em"}, "slow")});
   }
 });
@@ -24,7 +24,7 @@ $(window).resize(function(){
   var size = $(document).width();
   if (size >= 746) {
     $(".navText").css({"fontSize": "2em"});
-    navItems.css({"height": "75%"});
+    navItems.css({"height": "340px"});
     if(firstAnimationPlayed == false){
       navItems.css({"width": "25%"});
     } else {
@@ -99,19 +99,23 @@ function animateNavigation(clickedIcon, otherIcons, otherText){
 
     $(clickedIcon).animate({width: "100%"}, 3000)
     otherIcons.animate({width: ""}, 3000, function(){
+      otherIcons.css({"opacity": "0.5"})
       otherText.hide(0);
       otherIcons.hide(0);
       displayText(clickedIcon);
     });
-  } else {
+  } else { //Otherwise play first animation
     otherIcons.animate({width: ""}, 3000, function(){
       otherText.hide(0);
       otherIcons.hide(0);})
 
   $(clickedIcon).animate({width: "100%"}, 3000, function(){
-    $(".navTop").fadeIn(2000)
     displayText(clickedIcon);
   });
+
+  $("#topAbout").toggle(1000)
+  $("#topBlog").toggle(1500)
+  $("#topProjects").toggle(2000)
 
   navAnimationPlayed = true; // Ensures only top loop is played from now on
   }
@@ -123,7 +127,7 @@ function displayText(clickedIcon){
   //loads html page in between Div tag on click. If no file, returns nothing
 
   //Remove background image while page active and set opacity to none
-  $(clickedIcon).css({"background-image":"none", "opacity":"1", "text-shadow":"none"})
+  $(clickedIcon).css({"background-image":"none", "opacity":"1", "text-shadow":"none", "cursor":"default"})
   $("#" + clickedIcon[0].id + ":hover").css({"opacity":"none", "text-shadow":"none"})
 
   if(clickedIcon[0].id === "about") {
