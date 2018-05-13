@@ -86,40 +86,47 @@ $("#about, #blog, #projects, #topAbout, #topBlog, #topProjects").click(function(
     otherIcons = $("#about, #blog");
     activeTab = "#topProjects"
   };
-
   animateNavigation(clickedIcon, otherIcons, otherText);
 });
 
 function animateNavigation(clickedIcon, otherIcons, otherText){
-  //Check if animation has already ran
-  if (navAnimationPlayed === true) {
-    $(clickedIcon).show();
-    otherText.show();
-    otherIcons.show();
-
-    $(clickedIcon).animate({width: "100%"}, 3000)
-    otherIcons.animate({width: ""}, 3000, function(){
-      otherIcons.css({"opacity": "0.5"})
-      otherText.hide(0);
-      otherIcons.hide(0);
-      displayText(clickedIcon);
-    });
-  } else { //Otherwise play first animation
-    otherIcons.animate({width: ""}, 3000, function(){
-      otherText.hide(0);
-      otherIcons.hide(0);})
-
-  $(clickedIcon).animate({width: "100%"}, 3000, function(){
+  var size = $(document).width();
+  if (size < 746) { //Don't play animation if on mobile mode
     displayText(clickedIcon);
-  });
+    otherText.hide(0);
+    otherIcons.hide(0);
+    $("#topAbout, #topBlog, #topProjects").show(0);
+    navAnimationPlayed = true;
 
-  $("#topAbout").toggle(1000)
-  $("#topBlog").toggle(1500)
-  $("#topProjects").toggle(2000)
+  } else {
+    //Check if animation has already ran
+    if (navAnimationPlayed === true) {
+      $(clickedIcon).show();
+      otherText.show();
+      otherIcons.show();
 
-  navAnimationPlayed = true; // Ensures only top loop is played from now on
-  }
+      $(clickedIcon).animate({width: "100%"}, 3000)
+      otherIcons.animate({width: ""}, 3000, function(){
+        otherIcons.css({"opacity": "0.5"})
+        otherText.hide(0);
+        otherIcons.hide(0);
+        displayText(clickedIcon);
+      });
+    } else { //Otherwise play first animation
+      otherIcons.animate({width: ""}, 3000, function(){
+        otherText.hide(0);
+        otherIcons.hide(0);})
 
+      $(clickedIcon).animate({width: "100%"}, 3000, function(){
+        displayText(clickedIcon)});
+
+      $("#topAbout").toggle(1000);
+      $("#topBlog").toggle(1500);
+      $("#topProjects").toggle(2000);
+
+      navAnimationPlayed = true; // Ensures only top loop is played from now on
+    };
+  };
 };
 
 
@@ -141,5 +148,6 @@ function displayText(clickedIcon){
   }
 
   //TODO stop this from repeating each loop (It's redundant!)
+  //TODO topNav no longer activates after zooming in and out and then playing the navigation animation
   $(clickedIcon).css({"overflow-y": "scroll"})
 };
