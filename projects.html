@@ -1,50 +1,44 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 6.0.2.1 (Windows)"/>
-	<meta name="created" content="2018-05-09T13:03:52.976000000"/>
-	<meta name="changed" content="2018-05-09T21:13:45.146000000"/>
-	<style type="text/css">
-		@page { margin: 2cm }
-		p { margin-bottom: 0.25cm; line-height: 115% }
-		a:link { so-language: zxx }
-	</style>
-</head>
-<body lang="en-GB" dir="ltr">
-<p style="margin-bottom: 0cm; line-height: 100%"><b>This Site!</b></p>
-<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
-This site was my attempt at coming to grips with HTML, CSS and
-JavaScript following my introduction having taken the CS50 course at
-EDX. I wanted to create a website that made use of transition
-animations between pages. 
-</p>
-<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
-Unfortunately, for a first attempt, there a lot of redundancy in my
-code (As you will see by checking the page source). My hope was that
-the code could be easily repurposed into another site just by
-changing a few of the images and element names. Maybe I&rsquo;ll
-clean up the code a little and allow it to be repurposed &ndash;
-although it&rsquo;s more likely I&rsquo;ll get bored and make a new
-site once I find a new framework to play with!</p>
-<p style="margin-bottom: 0cm; line-height: 100%"><b>Coming Soon:
-Habit Tracker using Node.js or Flask:</b></p>
-<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
-This is my intended project for the final part of the CS50 course,
-which is a brilliant course for anyone that&rsquo;s interested &ndash;
-it&rsquo;s really given me much more confidence as a fledgling
-developer. I feel that developing my site was a nice primer for
-front-end development (Albeit there are a few aspects that are a
-little...wanting), but this next project will be a good opportunity
-to get my hands dirty with some of the server-site aspects of web
-development.</p>
-<p style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
-The application will act much like what you&rsquo;d find on the
-Android or Apple store, but with a few of its own little quirks
-thrown in. Habit formation/removal is something very near and dear to
-me. I was actually borderline obese and completely sedentary a couple
-of years ago, but having engrained some positive habits into my
-day-to-day life I&rsquo;m much more self-disciplined now.</p>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="site.css">
+    <title>Trains, Planes and Video Games | Projects</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><a class="navA" href="index.html">Trains, Planes and Video Games</a></h1>
+        <p id="tagline" >Murmurrings of a twenty-something amateur developer</p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li class="navButtons" id="about"><a class="navA" href="about.html">About</a></li>
+        <li class="navButtons" id="blog"><a class="navA" href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div type="contaner" id="sect-main">
+        <h2>Projects</h2>
+          <div type="container">
+          <h3>Get It Gogether</h3>
+          <div class="projectImagesDiv">
+          <img id="getittogether" alt="Get It Together" src="img/getittogether.png"/>
+          </div>
+          <p>Get It Together was the first full-scale app I ever worked on. This was my final project for  <a href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x">CS50</a>. At its core, it's a habit tracker and a calender, but with a few other features thrown in here and there. </p>
+          <p>The project ended up taking much longer than anticipated because I got it in my head that I had to do everything myself (Such as routing) without any pre-built solutions. I ended up meeting several roadblocks because I wasn't nearly versed enough in a particular subject to proceed. Needless to say, I have a deeper understanding of why front-end development and back-end development are categorised as two separate disciplines entirely. </p>
+          <p>I followed <a href="https://www.udemy.com/mern-stack-front-to-back/">Traversy Media's Udemy Course</a> at the beginning of my project, but eventually decided to go it alone for the rest of the project. I have doubtless committed a few anti-patterns here and there. I found it interesting to see my skills progress as more components were added, in that my code became more readable and made better use of ECMAScript 6 syntactic sugar. </p>
+          <p>The project was hardly ambitious, didn't stick to schedule and has some ugly code here and there, but I'm still immensely proud of the work I did. I started the project pretty much clueless with little conceptual understanding of things like state management, and ended it understanding how all of the elements of my application coalesce and developed a more reasoned approach to finding errors and correcting them </p>
+          <p>I'm looking to port this to Electron to create a desktop app as I can't find any reliable Node JS hosting for free.</p>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <p id="copyright">Website by Tim New, Copyright &copy; 2018</p>
+    </footer>
+
+    <script src="scripts.js"/></script>
+  </body>
 </html>
