@@ -1,18 +1,40 @@
 var width = document.body.clientWidth;
-var navItems = document.querySelectorAll(".navButtons")
+var mobileWidth = window.matchMedia('(max-width: 400px)')
+var section = document.getElementsByTagName('section')[0]
+let lang = document.querySelector('.languagePictures')
+let langList = document.createElement('div')
+
+langList.style.textAlign = 'center'
 
 
-console.log(width)
+section.insertBefore(langList, lang); 
 
-if(width < 1100) {
-  console.log(navItems)
-  // navItems.style.color = "red"
-  document.querySelectorAll(".navButtons").style.color = "red";
+function createList() {
+  let ul = document.createElement('ul')
+  let languages = ['Python', 'JavaScript', 'MongoDB', 'Express', 'React', 'NodeJS']
+  for(let i = 0; i < languages.length; i++) {
+    let li = document.createElement("li")
+    li.style.textShadow = 'none'
+    li.innerHTML=`${languages[i]}`
+    ul.appendChild(li)
+  }
+  langList.appendChild(ul)
+
 }
 
+//Stop the images overlapping the header etc. when in mobile.
+function scalePictures() {
+  if(mobileWidth.matches) {
+    lang.style.display = 'none'
+    langList.style.display = 'block'
+  } else {
+    lang.style.display = 'block'
+    langList.style.display = 'none'
+  }
+}
 
-// Get the page width and load it into a variable.
+scalePictures()
+createList()
 
-// if page width is less than mobile port width
-  // disable transition
-//
+mobileWidth.addListener(scalePictures)
+

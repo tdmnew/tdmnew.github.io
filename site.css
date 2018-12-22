@@ -73,6 +73,7 @@ section {
   margin: auto;
   padding: 0px 24% 20px 24%;
   display: inline-block;
+  text-align: justify;
 }
 
 #sect-main {
@@ -226,12 +227,12 @@ footer p {
 
  #sect1 {
    float: left;
-   width: 50%;
+   width: 49.5%;
  }
 
  #sect2 {
    float: right;
-   width: 50%;
+   width: 49.5%;
  }
 
  h3 {
