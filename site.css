@@ -21,8 +21,26 @@ h1, h2, h3, li {
   color: #F64C72;
 }
 
+h2 {
+  text-align: center;
+  border-radius: 5px;
+  padding: 0px;
+}
+
 li {
-  text-shadow: 2px 2px #2F2FA2; 
+  text-shadow: 2px 2px #591A1A; 
+}
+
+.sectionChild {
+  background-color: white;
+  opacity: 0.5;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.sectionChild:hover {
+  transition: 1s;
+  opacity: 1;
 }
 
 /* Header */
@@ -69,25 +87,15 @@ ul {
 /* Section */
 
 section {
-  min-height: 300px; 
   margin: auto;
   padding: 0px 24% 20px 24%;
   display: inline-block;
   text-align: justify;
-}
-
-#sect-main {
-  padding-top: 25px;
-}
-
-#sect-bottom {
-  position: absoloute;
-  min-height: 200px
-}
-
-h2 {
-  padding-top: 10px;
-  text-align: center;
+  background-image: url("img/background.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Footer */
@@ -107,7 +115,14 @@ footer p {
 
 /* Mobile Devices */
 
-/* Footer */
+/* Section - Mobile */
+@media (max-width: 1100px) {
+  .sectionChild {
+    opacity: 1;
+  }
+}
+
+/* Foote - Mobile */
 @media (min-width: 1100px) and (max-width: 1700px) { 
   footer{
     margin: 0px;
@@ -120,11 +135,6 @@ footer p {
  }
 
  /* Header Formatting - Mobile*/
-
- section {
-  margin: 50px 0px 0px 0px;
-
- }
 
  header p {
    float: none;
@@ -144,6 +154,9 @@ footer p {
 
  nav {
   padding: 0px;
+  height: 56.2px;
+  background-color: transparent;
+  border-bottom: none;
  }
 
  .navButtons {
@@ -161,11 +174,6 @@ footer p {
     padding: 0px;
     border-bottom: solid 0.5px;
     border-color: white;
-  }
-
-  #sect1, #sect2 {
-    float: none;
-    width: inherit;
   }
 
   h3 {
@@ -214,31 +222,81 @@ footer p {
 
  #about:hover, #blog:hover, #projects:hover {
    transition: 1s;
-   background-color: #2F2FA2;
    cursor: pointer;
    height: 30px;
-   text-color: white;
-   border-left: solid 0.5px;
-   border-right: solid 0.5px;
-   border-bottom: solid 0.5px;
+   color: white;
  }
 
  /* Section - Desktop */
-
- #sect1 {
-   float: left;
-   width: 49.5%;
- }
-
- #sect2 {
-   float: right;
-   width: 49.5%;
- }
 
  h3 {
    text-align: left;
  }
 }
+
+/* Home */
+
+#sect-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#sect-main {
+  width: 100%;
+}
+
+#sect1, #sect2 {
+  width: 50%;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.h2Index {
+  font-size: 1em;
+  text-shadow: none;
+  background-color: transparent;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.contacts:hover {
+  transition: 1s;
+  opacity: 1;
+  border-radius: 5px;
+
+}
+
+.contacts {
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+
+}
+
+#github, #email {
+  height: 50px;
+}
+
+/* Home - Mobile */
+
+@media(max-width: 1100px) {
+  #sect-bottom {
+    display: inherit;
+  }
+  
+  #sect1, #sect2 {
+    width: 100%;
+  }
+
+}
+
+@media(min-width: 1100px and max-width: 1200px ){
+   .h2Index {
+    font-size: 0.5em;
+  } 
+}
+
 
 /* Projects */
 #getittogether {
@@ -284,3 +342,6 @@ footer p {
   padding: 0px 10px 0px 10px;
 }
 
+#languageList {
+  text-align: center;
+}

@@ -1,13 +1,9 @@
 var width = document.body.clientWidth;
 var mobileWidth = window.matchMedia('(max-width: 400px)')
+var desktopSmallWidth = window.matchMedia('(max-width: 1100px)') 
 var section = document.getElementsByTagName('section')[0]
-let lang = document.querySelector('.languagePictures')
-let langList = document.createElement('div')
-
-langList.style.textAlign = 'center'
-
-
-section.insertBefore(langList, lang); 
+let langPictures = document.querySelector('.languagePictures')
+let langList = document.querySelector('#languageList')
 
 function createList() {
   let ul = document.createElement('ul')
@@ -19,22 +15,53 @@ function createList() {
     ul.appendChild(li)
   }
   langList.appendChild(ul)
-
 }
 
 //Stop the images overlapping the header etc. when in mobile.
 function scalePictures() {
   if(mobileWidth.matches) {
-    lang.style.display = 'none'
+    langPictures.style.display = 'none'
     langList.style.display = 'block'
   } else {
-    lang.style.display = 'block'
+    langPictures.style.display = 'block'
     langList.style.display = 'none'
   }
 }
 
-scalePictures()
-createList()
+//Animation on start
+function openWindow(){
 
-mobileWidth.addListener(scalePictures)
+}
+
+
+
+//onLoad
+document.addEventListener("DOMContentLoaded", (e) => {
+  if( window.location.pathname === '/about.html') {
+    scalePictures()
+    createList()
+
+    mobileWidth.addListener(scalePictures)
+  }
+
+  if (window.location.pathname === '/index.html') {
+    let nav = document.getElementsByTagName('nav')[0]
+
+    if(width < 1100) {
+      nav.style.height = "85px"
+    }
+
+    desktopSmallWidth.addListener(() => {
+      if(desktopSmallWidth.matches) {
+        nav.style.height = "85px"
+      } else {
+       nav.style.height = "30px" 
+      }
+    })
+  }
+
+
+    let sectionStyle = (window.getComputedStyle(section))
+    let sectionHeight = sectionStyle.getPropertyValue('height')
+})
 
