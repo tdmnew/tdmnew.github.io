@@ -31,12 +31,20 @@ function scalePictures() {
 //onLoad
 document.addEventListener("DOMContentLoaded", (e) => {
 
+let textBody = document.querySelector('.sectionChild')
 
+
+//Prevent mobile animation
+if(width > 680) {
   //Animation
-  let textBody = document.querySelector('.sectionChild')
   textBody.setAttribute(
     "style", "transition: 2s; opacity: 1; border-radius: 5px;"
   )
+} else {
+   textBody.setAttribute(
+    "style", "opacity: 1;"
+  )
+}
 
 
   if( window.location.pathname === '/about.html') {
@@ -46,28 +54,24 @@ document.addEventListener("DOMContentLoaded", (e) => {
     mobileWidth.addListener(scalePictures)
   }
  
-//  if (window.location.pathname === '/index.html') {
-//    let nav = document.getElementsByTagName('nav')[0]
-//
-//
-//    console.log("loaded")
-//
-//    if(width < 1100) {
-//      nav.style.height = "85px"
-//    }
-//
-//    desktopSmallWidth.addListener(() => {
-//      if(desktopSmallWidth.matches) {
-//        nav.style.height = "85px"
-//        console.log("active")
-//      } else {
-//       nav.style.height = "30px" 
-//      }
-//    })
-//  }
+  if (window.location.pathname === '/index.html') {
+    let nav = document.getElementsByTagName('nav')[0]
+
+    if(width < 1100) {
+      nav.style.height = "85px"
+    }
+
+    desktopSmallWidth.addListener(() => {
+      if(desktopSmallWidth.matches) {
+        nav.style.height = "85px"
+      } else {
+       nav.style.height = "30px" 
+      }
+    })
+  }
 
 
-    let sectionStyle = (window.getComputedStyle(section))
-    let sectionHeight = sectionStyle.getPropertyValue('height')
+//    let sectionStyle = (window.getComputedStyle(section))
+//    let sectionHeight = sectionStyle.getPropertyValue('height')
 })
 

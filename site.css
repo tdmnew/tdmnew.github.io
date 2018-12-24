@@ -40,11 +40,6 @@ li {
   padding-bottom: 2px;
 }
 
-.sectionChild:hover {
-  transition: 1s;
-  opacity: 1;
-}
-
 /* Header */
 
 header {
@@ -247,11 +242,9 @@ footer p {
 }
 
 .h2Index {
-  font-size: 1em;
+  font-size: 1.1em;
   text-shadow: none;
-  background-color: transparent;
-  margin-left: 5px;
-  margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 .contacts:hover {
@@ -320,8 +313,7 @@ footer p {
 /* Images */
 
 #express {
-  width: 290px;
-  object-fit: cover;
+  height: 80px;
 }
 
 .languagePictures {
@@ -338,4 +330,15 @@ footer p {
 
 #languageList {
   text-align: center;
+}
+
+/* About Page - Mobile */
+@media (max-width:1150px) {
+  .languages {
+    height: 50px;
+  }
+
+  #express {
+    height: 40px;
+  }
 }
