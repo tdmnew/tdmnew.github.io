@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+    <channel>
+        <title>Trains, Planes and Video Games</title>
+        <link>http://localhost:4000</link>
+        <description></description>
+        <lastBuildDate>Wed, 26 Dec 2018 12:45:15 +0000</lastBuildDate>
+        
+        <item>
+            <title>Don't Fear The Static Site Generator</title>
+            <link>
+                http://localhost:4000/2018/12/20/jekyll.html
+            </link>
+            <description>
+                &lt;p&gt;I’ve recently migrated my site to Jekyll from using pure HTML, CSS and JavaScript. I had this strange aversion towards using a static site generator from the beginning, but that probably had more to do with not doing much research on them. I assumed that it would be a case of just using a template and doing some modifications a la WordPress, therefore taking all the craftsmanship out o...
+            </description>
+            <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
+            <guid>
+                http://localhost:4000/2018/12/20/jekyll.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>Half-Life's 20th Anniversary</title>
+            <link>
+                http://localhost:4000/2018/11/11/half-life.html
+            </link>
+            <description>
+                &lt;p&gt;Looking back at my posts, it’s shocking that I haven’t mentioned anything about my favourite series of games. I remember being about 9 or 10 when I begged my parents incessantly to buy me the game having played the demo on a PC Gamer disk. I remember walking into the living room one day after school with my dad joking that he’d bought me a maths edutainment game, only to reveal he got ...
+            </description>
+            <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+            <guid>
+                http://localhost:4000/2018/11/11/half-life.html
+            </guid>
+        </item>
+        
+    </channel>
+</rss>

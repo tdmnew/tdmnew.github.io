@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="alternate" type="application/rss+xml"  href="{{ site.url }}/feed.xml" title="{{ site.title }}">
+    <link rel="stylesheet" href="{{ site.url }}/assets/site.css">
+    <title>{{ page.title }} | {{ site.title }} </title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        {% if page.title != 'Home' %}
+          <a href="/" class="navA"><h1 id="logo">Trains, Planes and Video Games</h1></a>
+        {% else %}
+          <h1>Trains, Planes and Video Games</h1>
+        {% endif %}
+        <p id="tagline" >Murmurrings of a twenty-something amateur developer</p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        {% assign mypages = site.pages | sort: "order" %}
+          {% for site in mypages %}
+            {% if site.title != page.title and site.title != 'Home' and site.url != '/feed.xml'  %}
+            <a class="navA" href="{{ site.url | absoloute_url }}"><li class="navButtons" id="liNav">{{ site.title }}</li></a>
+            {% endif %}
+          {% endfor %}
+      </ul>
+    </nav>
+    <section>
+      <div class="sectionChild">
+
+      {{ content }}
+
+    </section>
+    <footer>
+      <p id="copyright">Website by Tim New, Copyright &copy; 2018</p>
+    </footer>
+    <script src="{{ site.url }}/assets/scripts.js"/></script>
+  </body>
+</html>
