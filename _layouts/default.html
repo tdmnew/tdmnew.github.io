@@ -22,7 +22,7 @@
       <ul>
         {% assign mypages = site.pages | sort: "order" %}
           {% for site in mypages %}
-            {% if site.title != page.title and site.title != 'Home' and site.url != '/feed.xml'  %}
+            {% if site.title != page.title and site.title != 'Home' and site.url != '/feed.xml' and site.url != '/assets/css/style.css' %}
             <a class="navA" href="{{ site.url | absoloute_url }}"><li class="navButtons" id="liNav">{{ site.title }}</li></a>
             {% endif %}
           {% endfor %}
