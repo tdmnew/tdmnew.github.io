@@ -28,50 +28,79 @@ function scalePictures() {
   }
 }
 
-//onLoad
-document.addEventListener("DOMContentLoaded", (e) => {
-
-let textBody = document.querySelector('.sectionChild')
-
-
-//Prevent mobile animation
-if(width > 680) {
-  //Animation
-  textBody.setAttribute(
-    "style", "transition: 2s; opacity: 1; border-radius: 5px;"
-  )
-} else {
-   textBody.setAttribute(
-    "style", "opacity: 1;"
-  )
+function animateNav(nav, navHeight) {
+	var pos = 0
+	var framerate = setInterval(frame, 10)
+	function frame() {
+		if(pos == navHeight) {
+			clearInterval(framerate)
+		} else {
+			pos++
+			nav.style.height = pos + 'px'
+		}
+	}
 }
 
-  if( window.location.pathname === '/about.html') {
-    scalePictures()
-    createList()
+//onLoad
+document.addEventListener("DOMContentLoaded", (e) => {
+	var nav = document.getElementsByTagName('nav')[0]
+	var navBody = document.querySelector('ul')
+	let textBody = document.querySelector('.sectionChild')
+	var navHeight = ( width > 1100 ? 30 : 85)
+	var navButtons = document.getElementsByClassName("navButtons") 
+	var navButtonsCount = navBody.childElementCount
 
-    mobileWidth.addListener(scalePictures)
-  }
+	if (width < 1100 &&  navButtonsCount == 2){
+		navHeight = 57
+	}
 
-  //prevent cropping issue when more than two li items are on the nav bar
-  if (document.querySelector('ul').childElementCount === 3) {
-    let nav = document.getElementsByTagName('nav')[0]
+	nav.style.height = '0'
+	animateNav(nav, navHeight)
+	
+	navBody.style.opacity = "0"
 
-    if(width < 1100) {
-      nav.style.height = "85px"
-    }
+	navBody.style.display = "none"
+
+	setTimeout(() => {
+		navBody.style.display = "block"
+		setTimeout(() => { 
+			navBody.setAttribute(
+				"style", "opacity: 1; transition: 1s;"
+			)
+		}, 500)
+	}, 200)
+
+	//Prevent opacity change on mobile
+	if(width > 1100) {
+	  //Animation
+	  textBody.setAttribute(
+		"style", "transition: 2s; opacity: 1;"
+	  )
+	} else {
+	   textBody.setAttribute(
+		"style", "opacity: 1;"
+	  )
+	}
+
+	if( window.location.pathname === '/about.html') {
+		scalePictures()
+		createList()
+
+		mobileWidth.addListener(scalePictures)
+	}
 
     desktopSmallWidth.addListener(() => {
+		console.log("Event listener listening")
       if(desktopSmallWidth.matches) {
-        nav.style.height = "85px"
+        if(navButtonsCount == 2) {
+			nav.style.height = "57px"
+		} else {
+		  nav.style.height = "85px"
+		}
       } else {
        nav.style.height = "30px" 
       }
     })
-  }
 
-
-//    let sectionStyle = (window.getComputedStyle(section))
-//    let sectionHeight = sectionStyle.getPropertyValue('height')
 })
 

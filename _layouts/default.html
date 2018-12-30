@@ -20,9 +20,9 @@
     </header>
     <nav>
       <ul>
-        {% assign mypages = site.pages | sort: "order" %}
+        {% assign mypages = site.data.navigation| sort: "order" %}
           {% for site in mypages %}
-            {% if site.title != page.title and site.title != 'Home' and site.url != '/feed.xml' and site.url != '/assets/css/style.css' %}
+            {% if site.title != page.title %}
             <a class="navA" href="{{ site.url | absoloute_url }}"><li class="navButtons" id="liNav">{{ site.title }}</li></a>
             {% endif %}
           {% endfor %}
