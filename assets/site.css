@@ -338,22 +338,6 @@ footer p {
   float: right;
 }
 
-/* Projects - Mobile */
-
-@media (max-width:1100px) {
-
-  .projectImagesDiv {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  #getittogether {
-    margin: 0 auto;
-    width: 350px;
-    float: inherit;
-  }
-} 
-
 /* About Page */
 
 /* Images */
