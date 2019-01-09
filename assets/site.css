@@ -14,6 +14,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-size: 1.4rem;
   font-family: sans-serif, georgia;
 }
 
@@ -47,20 +48,25 @@ h2 {
 /* Header */
 
 header {
-  min-height: 5rem;
+  min-height: 10rem;
   border-bottom: solid 0.5px;
   background-color: #2F2FA2;
+  text-align: center;
 }
 
-header h1 {
+#logo {
   float: left;
-  font-size: 3em;
+  font-size: 3rem;
   letter-spacing: -0.1875rem;
   text-shadow: 0.1875rem 0.125rem #553D67;
+  position: relative;
+  bottom: 1rem;
 }
 
 #tagline {
-  color: white;
+	font-size: 1.4rem;
+	float: right;
+	color: white;
 }
 
 /* Nav */
@@ -163,19 +169,7 @@ footer p {
 
 @media (max-width:68.75rem) {
  .container {
-  max-width:1000px;
- }
-
- /* Header Formatting - Mobile*/
-
- header p {
-   float: none;
-   text-align: center;
-   padding: none;
- }
- header h1 {
-   float: none;
-   text-align: center;
+  max-width: 63.5rem;
  }
 
  /* Nav Items - Mobile */
@@ -219,7 +213,7 @@ footer p {
 
 }
 
-@media (max-width: 680px) {
+@media (max-width: 42.5rem) {
   section {
     padding: 0px;
   }
@@ -229,20 +223,9 @@ footer p {
 
 @media (min-width:68.75rem) {
  .container {
-  max-width: 80rem;
- }
-
-
- /* Header Formatting- Desktop */
-
- header p {
-   float: right;
-   position: relative;
-   top: 2.5rem;
- }
- header h1 {
-   float: left;
-   text-align: none;
+  max-width: 95rem;
+  position: relative;
+  top: 2.5rem;
  }
 
  /* Nav Items - Desktop */
@@ -291,9 +274,11 @@ footer p {
 }
 
 .h2Index {
-  font-size: 1.1em;
-  text-shadow: none;
-  margin-left: 0.625rem;
+	font-size: 1.1em;
+	text-shadow: none;
+	margin-left: 0.75rem;
+	position: relative;
+	bottom: 0.6rem;
 }
 
 .contacts:hover {

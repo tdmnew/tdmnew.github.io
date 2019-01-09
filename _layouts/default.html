@@ -10,16 +10,18 @@
   <body>
     <header>
       <div class="container">
+			<h1>
         {% if page.title != 'Home' %}
-          <a href="/" class="navA"><h1 id="logo">Trains, Planes and Video Games</h1></a>
+          <a href="/" class="navA"><span id="logo">Trains, Planes and Video Games</span></a>
         {% else %}
-          <h1>Trains, Planes and Video Games</h1>
+          <span id="logo">Trains, Planes and Video Games</span>
         {% endif %}
-        <p id="tagline" >Murmurrings of a twenty-something amateur developer</p>
+        <span id="tagline" >Murmurrings of a twenty-something amateur developer</span>
+			</h1>
       </div>
     </header>
     <nav>
-      <ul>
+       <ul id="unorderedList">
         {% assign mypages = site.data.navigation| sort: "order" %}
           {% for site in mypages %}
             {% if site.title != page.title %}
