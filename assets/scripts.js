@@ -29,14 +29,16 @@ function scalePictures() {
 }
 
 function animateNav(nav, navHeight) {
+	//Convert units to REM
+	navHeight = navHeight / 16
 	var pos = 0
 	var framerate = setInterval(frame, 10)
 	function frame() {
-		if(pos == navHeight) {
+		if(pos > navHeight) {
 			clearInterval(framerate)
 		} else {
-			pos++
-			nav.style.height = pos + 'px'
+			pos = pos + 0.075
+			nav.style.height = pos + 'rem'
 		}
 	}
 }
@@ -90,15 +92,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	}
 
     desktopSmallWidth.addListener(() => {
-		console.log("Event listener listening")
       if(desktopSmallWidth.matches) {
         if(navButtonsCount == 2) {
-			nav.style.height = "57px"
+			nav.style.height = "3.563rem"
 		} else {
-		  nav.style.height = "85px"
+		  nav.style.height = "5.313rem"
 		}
       } else {
-       nav.style.height = "30px" 
+       nav.style.height = "1.875rem" 
       }
     })
 
