@@ -180,7 +180,7 @@ footer p {
 
  nav {
   padding: 0px;
-  height: 56.2px;
+  height: 7.7rem;
   border-bottom: none;
  }
 
@@ -212,6 +212,15 @@ footer p {
   } 
 
 }
+
+
+@media (max-width: 42.5rem) {
+  nav {
+    background-color: transparent;
+  }
+}
+
+
 
 @media (max-width: 42.5rem) {
   section {
@@ -323,8 +332,16 @@ footer p {
 /* Projects */
 #getittogether {
   margin: 0px 0px 0px 3.125rem;
-  width: 400px;
+  width: 25rem;
   float: right;
+  position: relative;
+}
+
+@media(max-width: 68.75rem) {
+	#getittogether {
+		text-align: center;
+		float: none;
+	}
 }
 
 /* About Page */
@@ -352,7 +369,7 @@ footer p {
 }
 
 /* About Page - Mobile */
-@media (max-width:1150px) {
+@media (max-width:71.875rem) {
   .languages {
     height: 50px;
   }
