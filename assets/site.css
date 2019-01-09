@@ -67,7 +67,26 @@ header {
 	font-size: 1.4rem;
 	float: right;
 	color: white;
+	position: relative;
+	
 }
+
+
+@media (max-width:68.75rem) {
+	#logo {
+	  bottom: 1rem;
+	  left: 50%;
+	  transform: translateX(-50%)
+	}
+
+	#tagline {
+		position: relative;
+		right: 50%;
+		transform: translateX(50%)
+	}
+}
+
+
 
 /* Nav */
 
