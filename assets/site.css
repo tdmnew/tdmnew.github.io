@@ -368,7 +368,7 @@ footer p {
 /* Images */
 
 #express {
-  height: 80px;
+  height: 60px;
 }
 
 .languagePictures {
@@ -379,7 +379,7 @@ footer p {
 }
 
 .languages {
-  height: 100px;
+  height: 80px;
   padding: 0px 0.625rem 0px 0.625rem;
 }
 
@@ -390,10 +390,10 @@ footer p {
 /* About Page - Mobile */
 @media (max-width:71.875rem) {
   .languages {
-    height: 50px;
+    height: 40px;
   }
 
   #express {
-    height: 40px;
+    height: 25px;
   }
 }
