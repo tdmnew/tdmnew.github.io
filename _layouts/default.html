@@ -8,16 +8,16 @@
     <title>{{ page.title }} | {{ site.title }} </title>
   </head>
   <body>
-    <header>
-      <div class="container">
-			<h1>
+    <header class="header">
+      <div class="header--container">
+		<h1>
         {% if page.title != 'Home' %}
-          <a href="/" class="navA"><span id="logo">Trains, Planes and Video Games</span></a>
+          <a href="/" class="header--container--link"><span class="header--container--logo">Trains, Planes and Video Games</span></a>
         {% else %}
-          <span id="logo">Trains, Planes and Video Games</span>
+          <span class="header--container--logo">Trains, Planes and Video Games</span>
         {% endif %}
-        <span id="tagline" >Murmurrings of a twenty-something amateur developer</span>
-			</h1>
+        <span class="header--container--tagline">Murmurrings of a twenty-something amateur developer</span>
+		</h1>
       </div>
     </header>
     <nav>
