@@ -2,7 +2,13 @@
 title: Projects
 layout: default
 ---
+
+<div class="heading">
 <h2>Projects</h2>
+<div class="heading--animation"></div>
+</div>
+
+
 <h3>Get It Gogether</h3>
 
 <img id="getittogether" alt="Get It Together" src="assets/img/getittogether.png"/>

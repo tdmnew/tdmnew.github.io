@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	
 	navBody.style.opacity = "0"
 	navBody.style.display = "none"
+	
+
+	let timeOut = (width > 1100 ? 500 : 1100)
 
 	setTimeout(() => {
 		navBody.style.display = "block"
@@ -64,7 +67,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 			navBody.setAttribute(
 				"style", "opacity: 1; transition: 1s;"
 			)
-		}, 500)
+		}, timeOut)
 	}, 200)
 
 	//Prevent opacity change on mobile

@@ -30,6 +30,8 @@ h2 {
   text-align: center;
   border-radius: 0.3125rem;
   padding: 0px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 #liNav {
@@ -43,6 +45,11 @@ h2 {
   padding-right: 0.625rem;
   padding-top: 0.625rem;
   padding-bottom: 0.125rem;
+  position: relative;
+  max-width: 80rem;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 
 /* Header */
@@ -86,8 +93,6 @@ header {
 	}
 }
 
-
-
 /* Nav */
 
 nav {
@@ -106,8 +111,9 @@ li {
 
 ul {
   margin-top: 0px;
-  padding: 0px 30% 0px 0px;
   display: inline-block;
+  position: relative;
+  right: 25rem;
 }
 
 /* Section */
@@ -120,46 +126,27 @@ section {
   background-size: cover;
 }
 
+/* Heading */
 
-/* Desktop H2 Animation */
-@media (min-width: 68.75rem) {
-	h2 {
-		position: absoloute;
-		animation: h2AnimationDesktop 1s ease-out;
-	}
+.heading {
+	margin: .5rem 0 1rem 0;
 }
 
-/* Mobile H2 Animation */
-@media (max-width: 68.75rem) { 
-	h2 {
-	animation: h2AnimationMobile 1s ease-out;
-	}
+.heading--animation {
+	background: #2f2fa2;
+	height: 5px;
+	animation: h2Animation 1.5s ease-out;
 }
 
-@keyframes h2AnimationDesktop {
+@keyframes h2Animation {
 	0% {
-		transform: translateX(-5%);
-		opacity: 0;
+		width: 0;
 	}
 
 	100% {
-		transform: translateX(0);
-		opacity: 1;
+		width: 100%;
 	}
 }
-
-@keyframes h2AnimationMobile {
-	0% {
-		transform: translateY(-20%);
-		opacity: 0;
-	}
-
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
 
 
 /* Footer */
@@ -210,7 +197,8 @@ footer p {
 
   ul {
     display: inherit;
-    padding: 0px;
+	position: inherit;
+	padding:0;
   }
 
   li {
@@ -306,7 +294,6 @@ footer p {
 	text-shadow: none;
 	margin-left: 0.75rem;
 	position: relative;
-	bottom: 0.6rem;
 }
 
 .contacts:hover {
@@ -317,6 +304,8 @@ footer p {
 }
 
 .contacts {
+	position: relative;
+	top: .25rem; 
   opacity: 0.5;
   display: flex;
   flex-direction: row;
@@ -396,4 +385,12 @@ footer p {
   #express {
     height: 25px;
   }
+}
+
+/* Blog Page */
+
+.myposts {
+	position: relative;
+	right:0;
+
 }
