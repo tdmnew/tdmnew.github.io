@@ -27,8 +27,8 @@ h2 {
 }
 
 .sectionChild {
+	opacity: 0.2;
   background-color: white;
-  opacity: 0.5;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   padding-top: 0.625rem;
@@ -74,9 +74,26 @@ h2 {
 	float: right;
 	color: white;
 	position: relative;
-	
 }
 
+/* Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.header--container--logo {
+		left: 4rem;
+	}
+	.header--container--tagline {
+		right: 4rem;
+	}
+}
+/* Firefox */
+@-moz-document url-prefix() {
+    .header--container--logo {
+		left: 0;
+	}
+	.header--container--tagline {
+		right: 0;
+	}
+}
 
 @media (max-width:68.75rem) {
 	.header--container--logo {
@@ -238,7 +255,7 @@ footer p {
 
 @media (min-width:68.75rem) {
 .header--container {
-  max-width: 95rem;
+  max-width: 95rem; 
   position: relative;
   top: 2.5rem;
  }

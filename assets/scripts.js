@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	
 	navBody.style.opacity = "0"
 	navBody.style.display = "none"
-	
+
+	textBody.style.opacity = "0.5"
 
 	let timeOut = (width > 1100 ? 500 : 1100)
 
