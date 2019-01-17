@@ -3,20 +3,20 @@ title: About
 layout: default 
 ---
 
-<div type="container" id="sect-main">
-
 <div class="heading">
 <h2>About Me</h2>
 <div class="heading--animation"></div>
 </div>
 
 
-<p> Since a young age, I’ve always been in awe of people that knew how to program. At the tender age of eleven I bought a book on Visual Basic and tried to teach myself in its uses, but being a child with a short attention span my attempts were in vain. Since then, I’ve dabbled with programming at various points through the years.</p> 
-<p> I began to take this pursuit seriously about a  year and a half ago, and found this interest re-affirmed when I decided to give <a href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x">CS50</a> a try. It was challenging, my programs wouldn't compile half the time, but by the end of it I'd developed the self-efficacy that made me believe I had the chance to work as a developer full-time.</p>
-<p> I have a tendency to dabble with various languages, but find that my main strength comes in the use of pure JavaScript. I am familiar with several frameworks on top of this (React, NodeJS etc.). </p> 
-<p> I realise that to be a proficient developer, in addition to developing a core expertise in a specific area, you must be versatile and commit to life-long learning. I take this pursuit seriously, and try to stay versed in all the latest trends.</p>
+Since a young age, I’ve always been in awe of people that knew how to program. At the tender age of eleven I bought a book on Visual Basic and tried to teach myself in its uses, but being a child with a short attention span my attempts were in vain. Since then, I’ve dabbled with programming at various points through the years.
 
-</div>
+I began to take this pursuit seriously about a  year and a half ago, and found this interest re-affirmed when I decided to give <a href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x">CS50</a> a try. It was challenging, my programs wouldn't compile half the time, but by the end of it I'd developed the self-efficacy that made me believe I had the chance to work as a developer full-time.
+
+I have a tendency to dabble with various languages, but find that my main strength comes in the use of pure JavaScript. I am familiar with several frameworks on top of this (React, NodeJS etc.).
+
+I realise that to be a proficient developer, in addition to developing a core expertise in a specific area, you must be versatile and commit to life-long learning. I take this pursuit seriously, and try to stay versed in all the latest trends.
+
 
 <div class="heading">
 <h2>Experience</h2>

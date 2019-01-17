@@ -364,7 +364,10 @@ footer p {
 @media(max-width: 68.75rem) {
 	#getittogether {
 		text-align: center;
+		margin: 0;
 		float: none;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 
