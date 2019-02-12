@@ -5,7 +5,7 @@ layout: default
 
 
 <div class="heading">
-<h2>Projects</h2>
+<h2>Portfolio</h2>
 <div class="heading--animation"></div>
 </div>
 
