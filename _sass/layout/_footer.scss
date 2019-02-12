@@ -1,0 +1,28 @@
+/* Footer */
+
+footer {
+  text-align: center;
+  min-height: 3.125rem;
+  max-height: 4.375rem;
+  background-color: #2F2FA2;
+}
+
+footer p {
+  padding: 1.25rem 0px 1.25rem 0px;
+  margin: auto;
+  color: white;
+}
+
+/* Footer - Mobile */
+@media (min-width: 68.75rem) and (max-width: 106.3rem) { 
+  footer{
+    margin: 0px;
+  }
+}
+
+@media (max-width:68.75rem) {
+    footer {
+    margin: 0% 0px 0px 0px; 
+  } 
+}
+

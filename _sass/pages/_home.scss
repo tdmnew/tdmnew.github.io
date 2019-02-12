@@ -1,0 +1,87 @@
+/* Home */
+
+.sect-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sect-main {
+  width: 100%;
+}
+
+.sect1, .sect2 {
+  width: 50%;
+}
+
+.sect1 {
+	padding-right: 0.3125rem;	
+}
+
+.sect2 {
+	padding-left: 0.3125rem;
+}
+
+.contacts--text {
+	height: 2rem;
+	font-size: 1.2em;
+	position: relative;
+	top: 1rem;
+	left: 2%;
+}
+
+.contacts {
+	animation: sectionFadeIn 1.5s ease-out;
+	position: relative;
+	height: 4rem;
+	top: .25rem; 
+	display: flex;
+	flex-direction: row;
+}
+
+
+.contacts:hover {
+	background-color: #2f2fa2;
+	color: #fff;
+	transition: 1s;
+	border-radius: 0.3125rem;
+	#github, #email {
+		display: none;
+	}
+	.contacts--text {
+		animation: moveTextToCenter 1s ease-out;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes moveTextToCenter {
+	0% {
+		left: 25%;
+	}
+
+	100% {
+		left: 50%; 
+	}
+}
+
+#github, #email {
+  height: 3.125rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Home - Mobile */
+
+@media(max-width: 68.75rem) {
+  .sect-bottom {
+    display: inherit;
+  }
+  
+  .sect1, .sect2 {
+    width: 100%;
+	padding: 0;
+  }
+}
+

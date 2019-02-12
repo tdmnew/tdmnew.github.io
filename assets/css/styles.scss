@@ -1,0 +1,18 @@
+---
+# Jekyll stylesheet
+---
+
+@import 'base/globals.scss';
+
+@import 'abstracts/animation.scss';
+
+@import 'layout/header.scss';
+@import 'layout/heading.scss';
+@import 'layout/section.scss';
+@import 'layout/nav.scss';
+@import 'layout/footer.scss';
+
+@import 'pages/home.scss';
+@import 'pages/portfolio.scss';
+@import 'pages/about.scss';
+@import 'pages/blog.scss';

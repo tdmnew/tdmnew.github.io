@@ -1,0 +1,105 @@
+/* Portfolio */
+.portfolio--box {
+	height: 15rem;
+	border: solid 0.1rem #2f2fa2;
+	border-radius: 0.3rem;
+	margin: 2rem;
+	animation: portfolioMoveIn 2s ease-out;
+
+	&--text {
+		animation: fadeIn 3s ease-out;
+		position: relative;
+		top: 35%;
+		transform: translateY(-50%);
+		padding-left: 2rem;
+		color: white;
+
+		&--bs-links:hover .portfolio--box--text--bs-links--tooltip {
+			display: block;
+		}
+
+		&--bs-links {
+			&--tooltip {
+				display: none;
+				background-color: grey;
+			}
+			float: right;
+			padding-right: 2rem;
+			a {
+				text-decoration: none;
+				color: white;
+			}
+			a:hover {
+				color: black;
+			}
+		}
+	}
+
+	&--text {
+		@media (max-width:68.75rem) {
+			text-align: center;
+			padding: 0;
+		}
+	}
+}
+
+.portfolio--box:hover {
+	cursor: pointer;
+}
+
+#bookingSystem {
+	background-position: center;
+	background-image: linear-gradient(to right, 
+						rgba(18, 18, 64, 0.9), 
+						rgba(67, 67, 137, 0.4)),
+						url('../img/bookingsystem_banner.png');
+	}
+#chaletToitRouge {
+	background-position: center;
+	background-image: linear-gradient(to right, 
+						rgba(18, 18, 64, 0.9), 
+						rgba(67, 67, 137, 0.4)),
+						url('../img/chalettoitrouge_banner.png');
+}
+
+#getItTogether {
+	background-position: center;
+	background-image: linear-gradient(to right, 
+						rgba(18, 18, 64, 0.9), 
+						rgba(67, 67, 137, 0.4)),
+						url('../img/getittogether_banner.png');
+}
+
+
+
+@keyframes portfolioMoveIn {
+	0% {
+		height: 0;	
+		width: 2%;
+	}
+
+	50% {
+		height: 15rem;
+		width: 2%;
+	}
+
+	100%{
+		width: 90%;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	40% {
+		display: block;
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

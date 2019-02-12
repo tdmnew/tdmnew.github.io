@@ -44,6 +44,19 @@ function animateNav(nav, buttons) {
 	}
 }
 
+function changePage(page) {
+	switch(page) {
+		case getItTogether:
+			window.location.assign("https://getittogether.trainsplanesandvideogames.com")
+			break;
+		case chaletToitRouge:
+			window.location.assign("http://www.chalettoitrouge.fr")
+			break;
+		default:
+			console.log("Invalid page given")
+	}
+}
+
 //onLoad
 document.addEventListener("DOMContentLoaded", (e) => {
 	var nav = document.getElementsByTagName('nav')[0]

@@ -18,21 +18,34 @@ I have a tendency to dabble with various languages, but find that my main streng
 I realise that to be a proficient developer, in addition to developing a core expertise in a specific area, you must be versatile and commit to life-long learning. I take this pursuit seriously, and try to stay versed in all the latest trends.
 
 
+<div class="about--experience">
+
+<div class="about--experience--core">
 <div class="heading">
-<h2>Experience</h2>
+<h2>Core Knowledge</h2>
 <div class="heading--animation"></div>
 </div>
 
-<div id="languageList"></div>
-<div type="container" class="languagePictures">
+<div type="container" class="languagePictures__core">
 <img id="html5" class="languages" alt="html" src="/assets/img/html5.svg"/>
 <img id="css" class="languages" alt="css" src="/assets/img/css3.svg"/>
 <img id="sass" class="languages" alt="sass" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"/>
 <img id="js" class="languages" alt="javascript" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"/>
-<img id="mongodb" class="languages" alt="mongodb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/MongoDB-Logo-5c3a7405a85675366beb3a5ec4c032348c390b3f142f5e6dddf1d78e2df5cb5c.png/799px-MongoDB-Logo-5c3a7405a85675366beb3a5ec4c032348c390b3f142f5e6dddf1d78e2df5cb5c.png"/>
-<img id="express" class="languages" alt="express" src="/assets/img/expressjs.png"/>
 <img id="react" class="languages" alt="react" src="/assets/img/reactjs.png"/>
-<img id="nodejs" class="languages" alt="nodejs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png "/>
-<img id="python" class="languages" alt="python" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/120px-Python.svg.png"/>
+</div>
 </div>
 
+<div class="about--experience--other">
+<div class="heading">
+<h2>Other Knowledge</h2>
+<div class="heading--animation"></div>
+</div>
+
+<div class="languagePictures">
+<img id="mongodb" class="languages" alt="mongodb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/MongoDB-Logo-5c3a7405a85675366beb3a5ec4c032348c390b3f142f5e6dddf1d78e2df5cb5c.png/799px-MongoDB-Logo-5c3a7405a85675366beb3a5ec4c032348c390b3f142f5e6dddf1d78e2df5cb5c.png"/>
+<img id="express" class="languages" alt="express" src="/assets/img/expressjs.png"/>
+<img id="nodejs" class="languages" alt="nodejs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png "/>
+</div>
+</div>
+
+</div>

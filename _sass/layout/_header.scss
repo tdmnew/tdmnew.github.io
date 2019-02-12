@@ -1,0 +1,102 @@
+/* Header */
+
+.header {
+  min-height: 10rem;
+  border-bottom: solid 0.5px;
+  background-color: #2F2FA2;
+  text-align: center;
+}
+
+.header--container {
+  padding: 0px 3.125rem 0px 3.125rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.header--container--link, .navA {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header--container--logo {
+  float: left;
+  font-size: 3rem;
+  letter-spacing: -0.1875rem;
+  text-shadow: 0.1875rem 0.125rem #553D67;
+  position: relative;
+  bottom: 1rem;
+}
+
+.header--container--tagline {
+	font-size: 1.4rem;
+	float: right;
+	color: white;
+	position: relative;
+}
+
+/* Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.header--container--logo {
+		left: 4rem;
+	}
+	.header--container--tagline {
+		right: 4rem;
+	}
+}
+/* Firefox */
+@-moz-document url-prefix() {
+    .header--container--logo {
+		left: 0;
+	}
+	.header--container--tagline {
+		right: 0;
+	}
+}
+
+@media (max-width:68.75rem) {
+	.header--container--logo {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%)
+	}
+
+	.header--container--tagline {
+		position: relative;
+		padding-bottom: 2rem;
+		right: 50%;
+		transform: translateX(50%)
+	}
+}
+
+@media (max-width:68.75rem) {
+ .header--container {
+  max-width: 63.5rem;
+ }
+
+ /* Nav Items - Mobile */
+
+ .header {
+  border-color: white;
+ }
+}
+
+/* Header - Desktop */
+
+@media (min-width:68.75rem) {
+.header--container {
+  max-width: 95rem; 
+  position: relative;
+  top: 2.5rem;
+ }
+
+ /* Section - Desktop */
+
+ h3 {
+   text-align: left;
+ }
+
+}
+
+

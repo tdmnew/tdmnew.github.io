@@ -1,0 +1,76 @@
+/* About Page */
+
+/* Experience */
+
+.about--experience {
+	display: flex;
+
+	&--core {
+		padding-right: 0.3125rem;	
+	}
+
+	&--other {
+		padding-left: 0.3125rem;
+	}
+
+	&--core, &--other  {
+		width: 50%;
+	}
+}
+
+/* Images */
+
+#express {
+  height: 40px;
+  position: relative;
+  bottom: .5rem;
+}
+
+
+.languagePictures {
+	animation: sectionFadeIn 1.5s ease-out;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.languagePictures__core {
+	animation: sectionFadeIn 1.5s ease-out;
+	margin: 0 auto;
+	text-align: center;
+	width: 25rem;
+}
+
+.languages {
+  height: 60px;
+  padding: 0px 0.625rem 0px 0.625rem;
+}
+
+#languageList {
+  text-align: center;
+}
+
+/* About Page - Mobile */
+@media (max-width:71.875rem) {
+
+	.about--experience {
+		flex-direction: column;
+		padding: 0;
+		&--core, &--other {
+			width: 100%;
+		}
+	}
+	.languages {
+		height: 40px;
+	}
+
+.languagePictures__core {
+	width: 100%;
+}
+
+	#express {
+		bottom: 0;
+		height: 25px;
+	}
+}
+

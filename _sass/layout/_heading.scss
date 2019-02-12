@@ -1,0 +1,29 @@
+/* Heading */
+
+.heading {
+	margin: .5rem 0 1rem 0;
+
+	&--animation {
+		background: #2f2fa2;
+		height: 5px;
+		animation: h2Animation 1.5s ease-out;
+	}
+}
+
+
+@media (max-width:68.75rem) {
+  .heading {
+    text-align: center;
+  }
+}
+
+@keyframes h2Animation {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+

@@ -1,0 +1,70 @@
+/* Nav */
+
+nav {
+  height:1.87rem;
+  font-size: 1.5em;
+  background-color: #2f2fa2;
+  border-bottom: solid 0.5px;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  padding: 0px 1.25rem 0px 1.25rem;
+  opacity: 1;
+}
+
+ul {
+  margin-top: 0px;
+  display: inline-block;
+  position: relative;
+  right: 25rem;
+}
+
+@media (max-width:68.75rem) {
+nav {
+  padding: 0px;
+  height: 7.7rem;
+  border-bottom: none;
+ }
+
+ .navButtons {
+   background-color: #2F2FA2;
+   text-align: center;
+ }
+
+  ul {
+    display: inherit;
+	position: inherit;
+	padding:0;
+  }
+
+  li {
+    width: 100%;
+    padding: 0px;
+    border-bottom: solid 0.5px;
+    border-color: white;
+  }
+}
+
+@media (max-width: 42.5rem) {
+  nav {
+    background-color: transparent;
+  }
+}
+
+/* Nav Items - Desktop */
+
+@media (min-width:68.75rem) {
+#li {
+  height: 1.563rem;
+}
+
+.header--container--logo:hover,.navButtons:hover {
+  transition: 1s;
+  cursor: pointer;
+  color: white;
+}
+}
+
+
