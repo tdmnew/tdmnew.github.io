@@ -5,26 +5,32 @@
 	border: solid 0.1rem #2f2fa2;
 	border-radius: 0.3rem;
 	margin: 2rem;
-	animation: portfolioMoveIn 2s ease-out;
+	animation: portfolioMoveIn 3s ease-out;
 
 	&--text {
-		animation: fadeIn 3s ease-out;
+		animation: fadeIn 4.5s ease-out;
 		position: relative;
 		top: 35%;
 		transform: translateY(-50%);
 		padding-left: 2rem;
 		color: white;
+		
 
 		&--bs-links:hover .portfolio--box--text--bs-links--tooltip {
 			display: block;
 		}
+		
+		&--tagline {
+			color: #F64C72;
+		}
 
 		&--bs-links {
 			&--tooltip {
+				position: absolute;
 				display: none;
 				background-color: grey;
+				width: 15rem; 
 			}
-			float: right;
 			padding-right: 2rem;
 			a {
 				text-decoration: none;
@@ -35,17 +41,6 @@
 			}
 		}
 	}
-
-	&--text {
-		@media (max-width:68.75rem) {
-			text-align: center;
-			padding: 0;
-		}
-	}
-}
-
-.portfolio--box:hover {
-	cursor: pointer;
 }
 
 #bookingSystem {
@@ -85,7 +80,7 @@
 	}
 
 	100%{
-		width: 90%;
+		width: 94%;
 	}
 }
 

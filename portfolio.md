@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Portfolio 
 layout: default
 ---
 
@@ -13,6 +13,11 @@ layout: default
 	<div class="portfolio--box--text">
 		<h3>Get It Together</h3>
 		<span class="portfolio--box--text--tagline">Habit Tracker</span>
+		<br/><br/>
+		<span class="portfolio--box--text--bs-links">
+		<a href="https://getittogether.trainsplanesandvideogames.com">Live Demo</a>
+		</span>
+
 	</div>
 </div>
 
@@ -20,13 +25,18 @@ layout: default
 	<div class="portfolio--box--text">
 		<h3>Chalet Toit Rouge</h3>
 		<span class="portfolio--box--text--tagline">Brochure Website</span>
+		<br/><br/>
+		<span class="portfolio--box--text--bs-links">
+		<a href="http://www.chalettoitrouge.fr">Live Demo</a>
+		</span>
+
 	</div>
 </div>
 <div class="portfolio--box" id="bookingSystem">
 	<div class="portfolio--box--text">
 		<h3>Booking System</h3>
 		<span class="portfolio--box--text--tagline">Interactive React Booking System</span>
-
+		<br/><br/>
 		<span class="portfolio--box--text--bs-links">
 		<a href="http://bsclient.trainsplanesandvideogames.com">Client Demo</a> / <a href="http://bsadmin.trainsplanesandvideogames.com">Admin Demo</a>
 		<div class="portfolio--box--text--bs-links--tooltip">

@@ -1,6 +1,9 @@
 /* Footer */
 
 footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
   text-align: center;
   min-height: 3.125rem;
   max-height: 4.375rem;
@@ -22,7 +25,7 @@ footer p {
 
 @media (max-width:68.75rem) {
     footer {
-    margin: 0% 0px 0px 0px; 
+		margin: 0% 0px 0px 0px; 
   } 
 }
 

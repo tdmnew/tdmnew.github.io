@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-	<meta name="description" content="Developer fluent in HTML, CSS, JavaScript and several frameworks" /> 
+	<meta name="description" content="Developer fluent in HTML, CSS, JavaScript and several frameworks on top of this." /> 
     <link rel="alternate" type="application/rss+xml"  href="{{ site.url }}/feed.xml" title="{{ site.title }}">
 	<link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
     <title>{{ page.title }} | {{ site.title }} </title>
@@ -37,12 +37,10 @@
       </div>
     </header>
     <nav>
-       <ul id="unorderedList">
+       <ul class="nav--ul" id="unorderedList">
         {% assign mypages = site.data.navigation| sort: "order" %}
           {% for site in mypages %}
-            {% if site.title != page.title %}
-            <a class="navA" href="{{ site.url | absoloute_url }}"><li class="navButtons" id="liNav">{{ site.title }}</li></a>
-            {% endif %}
+            <a class="navA" href="{{ site.url | absoloute_url }}"><li class="nav--ul--buttons" id="liNav">{{ site.title }}</li></a>
           {% endfor %}
       </ul>
     </nav>
@@ -55,6 +53,5 @@
     <footer>
       <p id="copyright">Website by Tim New, &copy; 2019</p>
     </footer>
-    <script src="{{ site.url }}/assets/scripts.js"/></script>
   </body>
 </html>
