@@ -1,14 +1,15 @@
 /* Portfolio */
 
 .portfolio--box {
+	position: relative;
 	height: 15rem;
 	border: solid 0.1rem #2f2fa2;
 	border-radius: 0.3rem;
 	margin: 2rem;
-	animation: portfolioMoveIn 3s ease-out;
+	animation: portfolioMoveIn 2.5s ease-in-out;
 
 	&--text {
-		animation: fadeIn 4.5s ease-out;
+		animation: fadeIn 3.5s ease-out;
 		position: relative;
 		top: 35%;
 		transform: translateY(-50%);
@@ -70,17 +71,13 @@
 
 @keyframes portfolioMoveIn {
 	0% {
-		height: 0;	
-		width: 2%;
-	}
-
-	50% {
-		height: 15rem;
-		width: 2%;
+		right: 25%;
+		transform: scale(.5);
 	}
 
 	100%{
-		width: 94%;
+		right: 0;
+		transform: scale(1);
 	}
 }
 
