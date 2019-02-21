@@ -6,10 +6,10 @@
 	border: solid 0.1rem #2f2fa2;
 	border-radius: 0.3rem;
 	margin: 2rem;
-	animation: portfolioMoveIn 2.5s ease-in-out;
+	animation: portfolioMoveIn 1s ease-in-out;
 
 	&--text {
-		animation: fadeIn 3.5s ease-out;
+		animation: fadeIn 1.5s ease-out;
 		position: relative;
 		top: 35%;
 		transform: translateY(-50%);
@@ -71,8 +71,7 @@
 
 @keyframes portfolioMoveIn {
 	0% {
-		right: 25%;
-		transform: scale(.5);
+		transform: scale(.9);
 	}
 
 	100%{
